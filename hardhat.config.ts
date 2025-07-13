@@ -15,7 +15,7 @@ import "./tasks/FHECounter";
 
 // Load environment variables
 const MNEMONIC: string = vars.get("MNEMONIC", "test test test test test test test test test test test junk");
-let PRIVATE_KEY: string = vars.get("PRIVATE_KEY", "");
+const PRIVATE_KEY: string = vars.get("PRIVATE_KEY", "");
 const ETHERSCAN_API_KEY: string = vars.get("ETHERSCAN_API_KEY", "");
 const SEPOLIA_RPC_URL: string = vars.get("SEPOLIA_RPC_URL");
 
