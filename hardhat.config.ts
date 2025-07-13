@@ -15,13 +15,19 @@ import "./tasks/FHECounter";
 
 // Load environment variables
 const MNEMONIC: string = vars.get("MNEMONIC", "test test test test test test test test test test test junk");
-const PRIVATE_KEY: string = vars.get("PRIVATE_KEY", "");
+let PRIVATE_KEY: string = vars.get("PRIVATE_KEY", "");
 const ETHERSCAN_API_KEY: string = vars.get("ETHERSCAN_API_KEY", "");
 const SEPOLIA_RPC_URL: string = vars.get("SEPOLIA_RPC_URL");
 
 // Validate required environment variables
 if (!SEPOLIA_RPC_URL) {
   throw new Error("SEPOLIA_RPC_URL is not set in .env file");
+}
+if (!PRIVATE_KEY) {
+  throw new Error("PRIVATE_KEY is not set in .env file");
+}
+if (!ETHERSCAN_API_KEY) {
+  throw new Error("ETHERSCAN_API_KEY is not set in .env file");
 }
 if (!PRIVATE_KEY) {
   throw new Error("PRIVATE_KEY is not set in .env file");
